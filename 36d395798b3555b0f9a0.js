@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: Arial, Helvetica, sans-serif;\n}\n\n.topnav {\n    overflow: hidden;\n    background-color: #333;\n}\n\n.topnav a {\n    float: left;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav a.active {\n    background-color: #349beb;\n    color: white;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    gap: 10px;\n    margin: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.output {\n    resize: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: Arial, Helvetica, sans-serif;\n}\n\n.topnav {\n    overflow: hidden;\n    background-color: #333;\n}\n\n.topnav a {\n    float: left;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav a.active {\n    background-color: #349beb;\n    color: white;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    gap: 10px;\n    margin: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.output {\n    resize: none;\n}\n\n.selectAll {\n    background-color: #349beb;\n    color: white;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -950,7 +950,8 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "base64": () => (/* binding */ base64),
-/* harmony export */   "hex": () => (/* binding */ hex)
+/* harmony export */   "hex": () => (/* binding */ hex),
+/* harmony export */   "selectAll": () => (/* binding */ selectAll)
 /* harmony export */ });
 /* harmony import */ var _pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(11);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
@@ -986,9 +987,16 @@ function hex() {
     rand(_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__.rand_bin32_hex)
 }
 
+function selectAll() {
+    const output = document.getElementById('output')
+    output.focus()
+    output.select()
+}
+
 // init
 document.getElementById('base64').onclick = base64
 document.getElementById('hex').onclick = hex
+document.getElementById('selectAll').onclick = selectAll
 
 })();
 
