@@ -30,6 +30,13 @@ export function hex() {
     rand(rand_bin32_hex)
 }
 
+export function selectAll() {
+    const output = document.getElementById('output')
+    output.focus()
+    output.select()
+}
+
 // init
 document.getElementById('base64').onclick = base64
 document.getElementById('hex').onclick = hex
+document.getElementById('selectAll').onclick = selectAll

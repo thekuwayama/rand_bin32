@@ -38,3 +38,8 @@ body {
 .output {
     resize: none;
 }
+
+.selectAll {
+    background-color: #349beb;
+    color: white;
+}
