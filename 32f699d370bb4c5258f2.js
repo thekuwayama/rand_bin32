@@ -959,7 +959,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // function
-function base64() {
+function rand(f) {
     (0,_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
         .then(() => {
             if (document.getElementById('output').innerHTML.length > 0 && !confirm('再生成しますか？')) {
@@ -968,7 +968,7 @@ function base64() {
             
             var s
             try {
-                s = (0,_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__.rand_bin32_base64)()
+                s = f()
             } catch(e) {
                 alert(e)
                 return
@@ -978,23 +978,12 @@ function base64() {
         })
 }
 
+function base64() {
+    rand(_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__.rand_bin32_base64)
+}
+
 function hex() {
-    (0,_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
-        .then(() => {
-            if (document.getElementById('output').innerHTML.length > 0 && !confirm('再生成しますか？')) {
-                return
-            }
-
-            var s
-            try {
-                s = (0,_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__.rand_bin32_hex)()
-            } catch(e) {
-                alert(e)
-                return
-            }
-
-            document.getElementById('output').innerHTML = s
-        })
+    rand(_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__.rand_bin32_hex)
 }
 
 // init
