@@ -962,6 +962,10 @@ __webpack_require__.r(__webpack_exports__);
 function base64() {
     (0,_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
         .then(() => {
+            if (document.getElementById('output').innerHTML.length > 0 && !confirm('再生成しますか？')) {
+                return
+            }
+            
             var s
             try {
                 s = (0,_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__.rand_bin32_base64)()
@@ -977,6 +981,10 @@ function base64() {
 function hex() {
     (0,_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__["default"])()
         .then(() => {
+            if (document.getElementById('output').innerHTML.length > 0 && !confirm('再生成しますか？')) {
+                return
+            }
+
             var s
             try {
                 s = (0,_pkg_rand_bin32_js__WEBPACK_IMPORTED_MODULE_1__.rand_bin32_hex)()
