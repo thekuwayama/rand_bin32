@@ -6,6 +6,10 @@ import '../css/style.css'
 export function base64() {
     init()
         .then(() => {
+            if (document.getElementById('output').innerHTML.length > 0 && !confirm('再生成しますか？')) {
+                return
+            }
+            
             var s
             try {
                 s = rand_bin32_base64()
@@ -21,6 +25,10 @@ export function base64() {
 export function hex() {
     init()
         .then(() => {
+            if (document.getElementById('output').innerHTML.length > 0 && !confirm('再生成しますか？')) {
+                return
+            }
+
             var s
             try {
                 s = rand_bin32_hex()
