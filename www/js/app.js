@@ -1,5 +1,5 @@
 // import
-import init, {random_bin32_base64, random_bin32_hex} from '../../pkg/rand_bin32.js'
+import init, {rand_bin32_base64, rand_bin32_hex} from '../../pkg/rand_bin32.js'
 import '../css/style.css'
 
 // function
@@ -8,7 +8,7 @@ export function base64() {
         .then(() => {
             var s
             try {
-                s = random_bin32_base64()
+                s = rand_bin32_base64()
             } catch(e) {
                 alert(e)
                 return
@@ -23,7 +23,7 @@ export function hex() {
         .then(() => {
             var s
             try {
-                s = random_bin32_hex()
+                s = rand_bin32_hex()
             } catch(e) {
                 alert(e)
                 return

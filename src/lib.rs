@@ -4,7 +4,7 @@ use wasm_bindgen::prelude::*;
 use wasm_bindgen::JsValue;
 
 #[wasm_bindgen]
-pub fn random_bin32_base64() -> Result<JsValue, JsValue> {
+pub fn rand_bin32_base64() -> Result<JsValue, JsValue> {
     let mut buf = [0u8; 32];
     if let Err(_) = getrandom(&mut buf) {
         return Err(JsValue::from("getrandom error"));
@@ -14,7 +14,7 @@ pub fn random_bin32_base64() -> Result<JsValue, JsValue> {
 }
 
 #[wasm_bindgen]
-pub fn random_bin32_hex() -> Result<JsValue, JsValue> {
+pub fn rand_bin32_hex() -> Result<JsValue, JsValue> {
     let mut buf = [0u8; 32];
     if let Err(_) = getrandom(&mut buf) {
         return Err(JsValue::from("getrandom error"));
@@ -32,8 +32,8 @@ mod tests {
     use wasm_bindgen_test::*;
 
     #[wasm_bindgen_test]
-    fn test_random_bin32_base64() {
-        let result = random_bin32_base64();
+    fn test_rand_bin32_base64() {
+        let result = rand_bin32_base64();
         assert!(result.is_ok());
 
         let s = result.unwrap();
@@ -42,8 +42,8 @@ mod tests {
     }
 
     #[wasm_bindgen_test]
-    fn test_random_bin32_hex() {
-        let result = random_bin32_hex();
+    fn test_rand_bin32_hex() {
+        let result = rand_bin32_hex();
         assert!(result.is_ok());
 
         let s = result.unwrap();
