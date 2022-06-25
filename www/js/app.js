@@ -3,7 +3,7 @@ import init, {rand_bin32_base64, rand_bin32_hex} from '../../pkg/rand_bin32.js'
 import '../css/style.css'
 
 // function
-export function base64() {
+function rand(f) {
     init()
         .then(() => {
             if (document.getElementById('output').innerHTML.length > 0 && !confirm('再生成しますか？')) {
@@ -12,7 +12,7 @@ export function base64() {
             
             var s
             try {
-                s = rand_bin32_base64()
+                s = f()
             } catch(e) {
                 alert(e)
                 return
@@ -22,23 +22,12 @@ export function base64() {
         })
 }
 
+export function base64() {
+    rand(rand_bin32_base64)
+}
+
 export function hex() {
-    init()
-        .then(() => {
-            if (document.getElementById('output').innerHTML.length > 0 && !confirm('再生成しますか？')) {
-                return
-            }
-
-            var s
-            try {
-                s = rand_bin32_hex()
-            } catch(e) {
-                alert(e)
-                return
-            }
-
-            document.getElementById('output').innerHTML = s
-        })
+    rand(rand_bin32_hex)
 }
 
 // init
