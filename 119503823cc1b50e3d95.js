@@ -350,7 +350,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: Arial, Helvetica, sans-serif;\n}\n\n.topnav {\n    overflow: hidden;\n    background-color: #333;\n}\n\n.topnav a {\n    float: left;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav a.active {\n    background-color: #349beb;\n    color: white;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    gap: 10px;\n    margin: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    margin: 0;\n    font-family: Arial, Helvetica, sans-serif;\n}\n\n.topnav {\n    overflow: hidden;\n    background-color: #333;\n}\n\n.topnav a {\n    float: left;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 14px 16px;\n    text-decoration: none;\n    font-size: 17px;\n}\n\n.topnav a:hover {\n    background-color: #ddd;\n    color: black;\n}\n\n.topnav a.active {\n    background-color: #349beb;\n    color: white;\n}\n\n.wrapper {\n    display: grid;\n    grid-template-columns: 1fr 2fr 1fr;\n    gap: 10px;\n    margin: 10px;\n    grid-auto-rows: minmax(100px, auto);\n}\n\n.output {\n    resize: none;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
